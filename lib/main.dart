@@ -20,15 +20,17 @@ class MyApp extends StatelessWidget {
         designSize: const Size(390, 844),
         minTextAdapt: true,
         splitScreenMode: true,
-        builder: (_, child) {
-          return BlocProvider(
-              create: (context) => HomeCubit(FoodsRepository())..fetch(),
-              child: const MaterialApp(
-                  debugShowCheckedModeBanner: false, home: SplashPage()
+        child:
+            //  builder: (_, child) {
+            // return
+            MaterialApp(
+                debugShowCheckedModeBanner: false,
+                home: BlocProvider(
+                  create: (context) => HomeCubit(FoodsRepository())..fetch(),
+                  child: const TestView(),
 
                   // RotatingImagePageView()
                   // const HomeView(),
-                  ));
-        });
+                )));
   }
 }
