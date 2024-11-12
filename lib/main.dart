@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           create: (context) => HomeCubit(FoodsRepository())..fetch(),
           child: const MaterialApp(
             debugShowCheckedModeBanner: false,
-            home: SplashPage(),
+            home: SplashPage(), // splash page
           ),
         ));
   }
