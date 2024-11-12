@@ -29,8 +29,13 @@ class gridview_widget extends StatelessWidget {
           return Center(
             child: GestureDetector(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => DetailsView(index: index, foodsList: foodsList,)));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => DetailsView(
+                                index: index,
+                                foodsList: foodsList,
+                              )));
                 },
                 child: Stack(children: [
                   SizedBox(
@@ -59,10 +64,10 @@ class gridview_widget extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Positioned(
-                    child: RatingStar(),
+                  const Positioned(
                     top: 4,
                     right: 27,
+                    child: RatingStar(),
                   ),
                 ])),
           );
