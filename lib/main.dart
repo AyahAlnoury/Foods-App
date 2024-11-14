@@ -20,12 +20,6 @@ class MyApp extends StatelessWidget {
         designSize: const Size(390, 844),
         minTextAdapt: true,
         splitScreenMode: true,
-        child: BlocProvider(
-          create: (context) => HomeCubit(FoodsRepository())..fetch(),
-          child: const MaterialApp(
-            debugShowCheckedModeBanner: false,
-            home: SplashPage(), // splash page
-          ),
-        ));
+ 
   }
 }
