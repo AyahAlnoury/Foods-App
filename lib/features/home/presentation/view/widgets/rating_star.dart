@@ -1,35 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:yammy_app/core/utils/app_colors.dart';
+import 'package:yammy_app/features/home/data/models/home_model.dart';
 
 class RatingStar extends StatelessWidget {
-  const RatingStar({super.key});
-
+  const RatingStar({super.key, required this.foodsList, required this.index});
+  final List<Foods> foodsList;
+  final int index;
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 45,
       height: 20,
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(15)),
-        color: Color.fromARGB(234, 243, 82, 106),
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.all(Radius.circular(15)),
+        color: AppColor.primaryColor,
       ),
       child: Center(
-        child: const Row(
+        child: Row(
           children: [
-            Icon(
-              color: Colors.white, 
+            const Icon(
+              color: Colors.white,
               Icons.star,
               size: 16,
-            ), 
-            SizedBox(width: 4),
+            ),
+            const SizedBox(width: 4),
             Text(
-              "4.3",
-              style: TextStyle(color: Colors.white), 
+              foodsList[index].rating.toString(),
+              style: const TextStyle(color: Colors.white),
             )
-           ],
+          ],
         ),
       ),
     );
   }
 }
-  
- 

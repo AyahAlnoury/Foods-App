@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yammy_app/core/utils/app_colors.dart';
 
 class StartCookButton extends StatelessWidget {
   const StartCookButton({super.key});
@@ -12,15 +13,12 @@ class StartCookButton extends StatelessWidget {
         height: 40,
         child: ElevatedButton(
             onPressed: () {
-              // Navigator.push(context,
-              //     MaterialPageRoute(builder: (context) => const HomeView()));
             },
-            style: const ButtonStyle(
-              backgroundColor:
-                  MaterialStatePropertyAll(Color.fromARGB(234, 243, 82, 106)),
+            style: ButtonStyle(
+              backgroundColor: WidgetStatePropertyAll(AppColor.primaryColor),
             ),
-            child: Center(
-              child: const Text(
+            child: const Center(
+              child: Text(
                 'Start Cook',
                 style: TextStyle(color: Colors.white, fontSize: 24),
               ),
